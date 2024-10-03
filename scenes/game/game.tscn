@@ -1,8 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgxsb7pl24rlf"]
+[gd_scene load_steps=7 format=3 uid="uid://dgxsb7pl24rlf"]
 
+[ext_resource type="PackedScene" uid="uid://3f616s281vwv" path="res://scenes/wall/wall.tscn" id="1_6ni6d"]
 [ext_resource type="PackedScene" uid="uid://dwmsu873ia7o8" path="res://scenes/character/character.tscn" id="1_dqcfi"]
 [ext_resource type="Script" path="res://scenes/game/rigid_body_2d.gd" id="2_fltli"]
 [ext_resource type="Texture2D" uid="uid://uspalbwla7yj" path="res://assets/art/effect_blastLarge.png" id="2_jmvqu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8dyf0"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pxbaa"]
 radius = 10.198
@@ -10,16 +15,31 @@ radius = 10.198
 [node name="Game" type="Node2D"]
 
 [node name="Character" parent="." instance=ExtResource("1_dqcfi")]
-position = Vector2(18, 550)
+position = Vector2(665, 552)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_8dyf0")
 script = ExtResource("2_fltli")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(61, 29)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_jmvqu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(61, 29)
 shape = SubResource("CircleShape2D_pxbaa")
+
+[node name="Wall" parent="." instance=ExtResource("1_6ni6d")]
+position = Vector2(561, -10)
+scale = Vector2(1.29, 1)
+
+[node name="Wall2" parent="." instance=ExtResource("1_6ni6d")]
+position = Vector2(-10, 309)
+rotation = 1.5708
+
+[node name="Wall3" parent="." instance=ExtResource("1_6ni6d")]
+position = Vector2(1162, 310)
+rotation = 1.5708
 
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]

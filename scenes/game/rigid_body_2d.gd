@@ -6,20 +6,23 @@ extends RigidBody2D
 func _ready():
 	contact_monitor = true
 	max_contacts_reported = 10
+	linear_damp_mode = 1
+	linear_damp = 0
 	gravity_scale = 0
+	#custom_integrator = true
 	#apply_central_impulse(Vector2(100,0))
-	add_constant_central_force(Vector2(100,0))
+	apply_central_impulse(Vector2(100,200))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-func _physics_process(delta):
-	pass
+#func _physics_process(delta):
+	#
 	
-	
+#func _integrate_forces(state: PhysicsDirectBodyState2D):
+	#state.add_constant_central_force(Vector2(100,0))
 
-func _on_body_entered(body):
-	print("here", linear_velocity.x)
-	linear_velocity.y = -1*linear_velocity.y
+#func _on_body_entered(body):
+	#apply_central_force(Vector2(0, -400))
