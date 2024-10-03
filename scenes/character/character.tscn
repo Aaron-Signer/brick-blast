@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwmsu873ia7o8"]
+
+[ext_resource type="Texture2D" uid="uid://mnautk6qm7dp" path="res://assets/art/tile_block.png" id="1_f4msx"]
+[ext_resource type="Script" path="res://scenes/character/character.gd" id="1_q0gst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbnoo"]
+size = Vector2(20, 20.0917)
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_q0gst")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.22, 0.36)
+texture = ExtResource("1_f4msx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.0499997)
+scale = Vector2(3.89, 1.14)
+shape = SubResource("RectangleShape2D_vbnoo")
