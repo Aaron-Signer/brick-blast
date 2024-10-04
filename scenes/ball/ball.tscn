@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://disupbdegb2at"]
+
+[ext_resource type="Script" path="res://scenes/ball/ball.gd" id="1_vi3ap"]
+[ext_resource type="Texture2D" uid="uid://uspalbwla7yj" path="res://assets/art/effect_blastLarge.png" id="1_wax6v"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bi14k"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g14ik"]
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_bi14k")
+script = ExtResource("1_vi3ap")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wax6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.56, 1.56)
+shape = SubResource("CircleShape2D_g14ik")

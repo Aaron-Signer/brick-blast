@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1send7a0i2gv"]
+
+[ext_resource type="Script" path="res://scenes/brick/brick_2.gd" id="1_thpgr"]
+[ext_resource type="Texture2D" uid="uid://mnautk6qm7dp" path="res://assets/art/tile_block.png" id="1_v316g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11n60"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_thpgr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v316g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3.12, 3.12)
+shape = SubResource("RectangleShape2D_11n60")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
