@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgxsb7pl24rlf"]
+[gd_scene load_steps=6 format=3 uid="uid://dgxsb7pl24rlf"]
 
 [ext_resource type="PackedScene" uid="uid://3f616s281vwv" path="res://scenes/wall/wall.tscn" id="1_6ni6d"]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_67t0y"]
 [ext_resource type="PackedScene" uid="uid://dwmsu873ia7o8" path="res://scenes/character/character.tscn" id="1_dqcfi"]
 [ext_resource type="PackedScene" uid="uid://disupbdegb2at" path="res://scenes/ball/ball.tscn" id="1_t66yj"]
 [ext_resource type="PackedScene" uid="uid://d1send7a0i2gv" path="res://scenes/brick/brick2.tscn" id="5_s5opt"]
 
 [node name="Game" type="Node2D"]
-
-[node name="Ball" parent="." instance=ExtResource("1_t66yj")]
-position = Vector2(661, 515)
+script = ExtResource("1_67t0y")
+ball = ExtResource("1_t66yj")
 
 [node name="Character" parent="." instance=ExtResource("1_dqcfi")]
 position = Vector2(665, 552)
