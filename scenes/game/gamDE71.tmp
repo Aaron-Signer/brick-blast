@@ -29,7 +29,6 @@ rotation = 1.5708
 
 [node name="RigidBody2D2" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(131, 47)
-number_of_hits = 5
 
 [node name="RigidBody2D3" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(195, 47)
@@ -174,7 +173,6 @@ position = Vector2(1091, 175)
 
 [node name="RigidBody2D50" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(131, 239)
-number_of_hits = 5
 
 [node name="RigidBody2D66" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(66, 47)
@@ -187,15 +185,12 @@ position = Vector2(66, 175)
 
 [node name="RigidBody2D69" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(66, 239)
-number_of_hits = 5
 
 [node name="RigidBody2D51" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(195, 239)
-number_of_hits = 5
 
 [node name="RigidBody2D52" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(259, 239)
-number_of_hits = 5
 
 [node name="RigidBody2D53" parent="Node" instance=ExtResource("5_s5opt")]
 position = Vector2(323, 239)
