@@ -7,8 +7,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (Input.is_action_just_pressed("start")):
-		Signals.launch_ball.emit()
+	pass
 
 func _physics_process(delta):
 	if (Input.is_action_pressed("left")):
