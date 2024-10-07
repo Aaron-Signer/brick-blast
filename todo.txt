@@ -1,4 +1,4 @@
 - have teh ball shoot from the platform in a random angle
 - Have the ball disappear when it exits the screen
-- Create overaly to shoot the ball
+- (done) Create overaly to shoot the ball
 - (dont) implament multi hit bricks
