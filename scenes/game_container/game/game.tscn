@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://scenes/game_container/game/game.gd" id="1_67t0y"]
 [ext_resource type="PackedScene" uid="uid://dwmsu873ia7o8" path="res://scenes/game_container/game/character/character.tscn" id="1_dqcfi"]
 [ext_resource type="PackedScene" uid="uid://disupbdegb2at" path="res://scenes/game_container/game/ball/ball.tscn" id="1_t66yj"]
+[ext_resource type="PackedScene" uid="uid://bd7aco8tyftnk" path="res://scenes/game_container/game/game_start/game_start.tscn" id="3_o7xlw"]
 [ext_resource type="PackedScene" uid="uid://cc1janpp0j2v5" path="res://scenes/game_container/main_menu/main_menu.tscn" id="4_b3eca"]
-[ext_resource type="PackedScene" uid="uid://bn4qcg70uuipc" path="res://scenes/game_container/game/label.tscn" id="6_2ejxo"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_67t0y")
 ball = ExtResource("1_t66yj")
-start_game_label = ExtResource("6_2ejxo")
+game_start = ExtResource("3_o7xlw")
 main_menu = ExtResource("4_b3eca")
 
 [node name="Character" parent="." instance=ExtResource("1_dqcfi")]

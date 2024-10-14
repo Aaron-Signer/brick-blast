@@ -1,10 +1,12 @@
 extends Node2D
 
+@onready var character = $Character
+
 @export var ball: PackedScene
-@export var start_game_label: PackedScene
+@export var game_start: PackedScene
 @export var main_menu: PackedScene
 
-var start_game_label_node: Node
+var game_start_node: Node
 var main_menu_node: Node
 var level_node: Node2D
 var game_in_progress: bool = false
@@ -25,7 +27,7 @@ func _process(delta):
 
 func start():
 	game_in_progress = true
-	start_game_label_node.queue_free()
+	game_start_node.queue_free()
 	
 	var level_scene_path = "res://scenes/levels/level_" + level + "/level_" + level + ".tscn"
 	var imported_resource: PackedScene = load(level_scene_path)
@@ -34,12 +36,15 @@ func start():
 	level_node = imported_resource.instantiate()
 	add_child(level_node)
 	var ball = ball.instantiate()
+	ball.position.x = 100
 	add_child(ball)
 	
 func end_game():
+	character.position.x = 100
 	game_in_progress = false
-	start_game_label_node = start_game_label.instantiate()
-	add_child(start_game_label_node)
+	game_start_node = game_start.instantiate()
+	game_start_node.level = level
+	add_child(game_start_node)
 	
 	if (level_node != null):
 		level_node.queue_free()
