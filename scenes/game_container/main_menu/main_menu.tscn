@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://scenes/game_container/main_menu/main_menu.gd" id="1_1r5vb"]
 [ext_resource type="Texture2D" uid="uid://bkckvyno4djec" path="res://assets/art/Main Menu Background.jpg" id="2_dcn1l"]
 
-[node name="Container" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 81.0
-offset_bottom = 69.0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("1_1r5vb")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -15,7 +15,7 @@ position = Vector2(576, 324)
 scale = Vector2(0.6, 0.54)
 texture = ExtResource("2_dcn1l")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="GameTitleRichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 57.0
@@ -26,3 +26,14 @@ theme_override_constants/shadow_offset_y = 20
 theme_override_constants/shadow_offset_x = 10
 theme_override_font_sizes/normal_font_size = 200
 text = "Brick Blast"
+
+[node name="LevelsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 336.0
+offset_right = 689.0
+offset_bottom = 447.0
+theme_override_font_sizes/font_size = 75
+text = "Levels"
+
+[connection signal="pressed" from="LevelsButton" to="." method="_on_levels_button_pressed"]
