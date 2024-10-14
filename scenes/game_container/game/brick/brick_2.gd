@@ -5,7 +5,6 @@ extends RigidBody2D
 @onready var sprite2D: Sprite2D = $Sprite2D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	calculate_brick_color()
 	
@@ -15,11 +14,8 @@ func _ready():
 	freeze_mode = 1
 	label.text = str(number_of_hits)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
 
 func _on_body_entered(body):
 	calculate_brick_color()

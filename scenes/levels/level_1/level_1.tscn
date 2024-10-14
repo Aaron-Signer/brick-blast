@@ -10,6 +10,7 @@ number_of_hits = 15
 
 [node name="RigidBody2D3" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(195, 47)
+number_of_hits = 15
 
 [node name="RigidBody2D4" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(259, 47)

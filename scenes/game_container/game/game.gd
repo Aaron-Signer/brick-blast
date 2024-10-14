@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var character = $Character
+@onready var character: CharacterBody2D = $Character
 
 @export var ball: PackedScene
 @export var game_start: PackedScene
@@ -35,12 +35,13 @@ func start():
 	
 	level_node = imported_resource.instantiate()
 	add_child(level_node)
+	
 	var ball = ball.instantiate()
-	ball.position.x = 100
+	ball.position.x = character.position.x
+	ball.position.y = character.position.y - 50
 	add_child(ball)
 	
 func end_game():
-	character.position.x = 100
 	game_in_progress = false
 	game_start_node = game_start.instantiate()
 	game_start_node.level = level
