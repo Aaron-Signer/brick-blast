@@ -3,12 +3,13 @@ extends Node2D
 @export var ball: PackedScene
 @export var start_game_label: PackedScene
 @export var main_menu: PackedScene
-@export var level_1: PackedScene
 
 var start_game_label_node: Node
 var main_menu_node: Node
-var level_1_node: Node2D
+var level_node: Node2D
 var game_in_progress: bool = false
+
+var level: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,16 +25,21 @@ func _process(delta):
 
 func start():
 	game_in_progress = true
-	main_menu_node.queue_free()
-	level_1_node = level_1.instantiate()
-	add_child(level_1_node)
+	start_game_label_node.queue_free()
+	
+	var level_scene_path = "res://scenes/levels/level_" + level + "/level_" + level + ".tscn"
+	var imported_resource: PackedScene = load(level_scene_path)
+	level_node = imported_resource.instantiate()
+	
+	level_node = imported_resource.instantiate()
+	add_child(level_node)
 	var ball = ball.instantiate()
 	add_child(ball)
 	
 func end_game():
 	game_in_progress = false
-	main_menu_node = main_menu.instantiate()
-	add_child(main_menu_node)
+	start_game_label_node = start_game_label.instantiate()
+	add_child(start_game_label_node)
 	
-	if (level_1_node != null):
-		level_1_node.queue_free()
+	if (level_node != null):
+		level_node.queue_free()

@@ -1,19 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgxsb7pl24rlf"]
+[gd_scene load_steps=7 format=3 uid="uid://dgxsb7pl24rlf"]
 
 [ext_resource type="PackedScene" uid="uid://3f616s281vwv" path="res://scenes/game_container/game/wall/wall.tscn" id="1_6ni6d"]
 [ext_resource type="Script" path="res://scenes/game_container/game/game.gd" id="1_67t0y"]
 [ext_resource type="PackedScene" uid="uid://dwmsu873ia7o8" path="res://scenes/game_container/game/character/character.tscn" id="1_dqcfi"]
 [ext_resource type="PackedScene" uid="uid://disupbdegb2at" path="res://scenes/game_container/game/ball/ball.tscn" id="1_t66yj"]
-[ext_resource type="PackedScene" uid="uid://cc1janpp0j2v5" path="res://scenes/game_container/start_game/main_menu.tscn" id="4_b3eca"]
-[ext_resource type="PackedScene" uid="uid://bn4qcg70uuipc" path="res://scenes/game_container/start_game/label.tscn" id="6_2ejxo"]
-[ext_resource type="PackedScene" uid="uid://damt3d5ow6sse" path="res://scenes/levels/level_1/level_1.tscn" id="6_urqn2"]
+[ext_resource type="PackedScene" uid="uid://cc1janpp0j2v5" path="res://scenes/game_container/main_menu/main_menu.tscn" id="4_b3eca"]
+[ext_resource type="PackedScene" uid="uid://bn4qcg70uuipc" path="res://scenes/game_container/game/label.tscn" id="6_2ejxo"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_67t0y")
 ball = ExtResource("1_t66yj")
 start_game_label = ExtResource("6_2ejxo")
 main_menu = ExtResource("4_b3eca")
-level_1 = ExtResource("6_urqn2")
 
 [node name="Character" parent="." instance=ExtResource("1_dqcfi")]
 position = Vector2(665, 552)
