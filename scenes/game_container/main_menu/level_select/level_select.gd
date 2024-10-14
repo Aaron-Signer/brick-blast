@@ -1,4 +1,4 @@
-extends GridContainer
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,3 +17,7 @@ func _on_level_1_button_pressed():
 
 func _on_level_2_button_pressed():
 	Signals.level_selected.emit("2")
+
+
+func _on_main_menu_button_pressed():
+	Signals.navigate_to_main_menu.emit()

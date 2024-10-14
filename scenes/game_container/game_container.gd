@@ -11,16 +11,20 @@ var level_select_node: Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	main_menu_node = main_menu.instantiate()
-	add_child(main_menu_node)
+	navigate_to_main_menu()
 	Signals.level_selected.connect(start_level)
 	Signals.navigate_to_level_select.connect(navigate_to_level_select)
-	
+	Signals.navigate_to_main_menu.connect(navigate_to_main_menu)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func navigate_to_main_menu():
+	remove_all_children()
+	main_menu_node = main_menu.instantiate()
+	add_child(main_menu_node)
 	
 func navigate_to_level_select():
 	remove_all_children()
