@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1send7a0i2gv"]
 
-[ext_resource type="Script" path="res://scenes/brick/brick_2.gd" id="1_thpgr"]
+[ext_resource type="Script" path="res://scenes/game_container/game/brick/brick_2.gd" id="1_thpgr"]
 [ext_resource type="Texture2D" uid="uid://mnautk6qm7dp" path="res://assets/art/tile_block.png" id="1_v316g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11n60"]
