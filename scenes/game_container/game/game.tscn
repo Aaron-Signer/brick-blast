@@ -13,8 +13,13 @@ ball = ExtResource("1_t66yj")
 game_start = ExtResource("3_o7xlw")
 main_menu = ExtResource("4_b3eca")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0666667, 0.258824, 0.239216, 1)
+
 [node name="Character" parent="." instance=ExtResource("1_dqcfi")]
-position = Vector2(665, 552)
+position = Vector2(576, 552)
 
 [node name="Wall" parent="." instance=ExtResource("1_6ni6d")]
 position = Vector2(561, -10)
