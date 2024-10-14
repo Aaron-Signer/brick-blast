@@ -6,7 +6,7 @@
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(131, 47)
-number_of_hits = 5
+number_of_hits = 15
 
 [node name="RigidBody2D3" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(195, 47)
@@ -55,9 +55,11 @@ position = Vector2(1091, 47)
 
 [node name="RigidBody2D18" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(131, 111)
+number_of_hits = 15
 
 [node name="RigidBody2D19" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(195, 111)
+number_of_hits = 15
 
 [node name="RigidBody2D20" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(259, 111)
@@ -103,9 +105,11 @@ position = Vector2(1091, 111)
 
 [node name="RigidBody2D34" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(131, 175)
+number_of_hits = 15
 
 [node name="RigidBody2D35" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(195, 175)
+number_of_hits = 15
 
 [node name="RigidBody2D36" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(259, 175)
@@ -155,12 +159,15 @@ number_of_hits = 5
 
 [node name="RigidBody2D66" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(66, 47)
+number_of_hits = 15
 
 [node name="RigidBody2D67" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(66, 111)
+number_of_hits = 15
 
 [node name="RigidBody2D68" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(66, 175)
+number_of_hits = 15
 
 [node name="RigidBody2D69" parent="." instance=ExtResource("1_qfyhs")]
 position = Vector2(66, 239)
