@@ -14,12 +14,18 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
+	var collision_info 
+	
 	if (Input.is_action_pressed("left")):
 		velocity = Vector2(-800,0)
-		move_and_slide()
+		collision_info = move_and_slide()
 	if (Input.is_action_pressed("right")):
 		velocity = Vector2(800,0)
-		move_and_slide()
+		collision_info = move_and_slide()
+		
+	if collision_info:
+		var collision_point = collision_info.get_position()
+		collision_point
 		
 func start():
 	ball_node.queue_free()

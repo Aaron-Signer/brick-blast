@@ -8,6 +8,7 @@
 size = Vector2(20, 20.0917)
 
 [node name="Character" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_q0gst")
 ball = ExtResource("2_xtski")
 
@@ -16,7 +17,7 @@ scale = Vector2(1.22, 0.36)
 texture = ExtResource("1_f4msx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, -0.0499997)
 scale = Vector2(3.89, 1.14)
 shape = SubResource("RectangleShape2D_vbnoo")
+debug_color = Color(0, 0.590028, 0.754067, 0.42)

@@ -5,6 +5,8 @@ func _ready():
 	max_contacts_reported = 10
 	linear_damp_mode = 1
 	linear_damp = 0
+	angular_damp_mode = 1
+	angular_damp = 0
 	gravity_scale = 0
 	var launch_angle = randf_range(-PI/8, PI/8)
 	var vector = Vector2(0, -400).rotated(launch_angle)
