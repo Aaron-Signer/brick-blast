@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2gcgahnuvh5l"]
+
+[ext_resource type="Script" path="res://scenes/game_container/main_menu/level_select/level_select.gd" id="1_gx0k1"]
+[ext_resource type="Texture2D" uid="uid://bkckvyno4djec" path="res://assets/art/Main Menu Background.jpg" id="2_g0h7k"]
+
+[node name="LevelSelect" type="GridContainer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+rotation = 0.00319094
+columns = 3
+script = ExtResource("1_gx0k1")
+
+[node name="Level1Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Level 1"
+
+[node name="Sprite2D" type="Sprite2D" parent="Level1Button"]
+z_index = -1
+position = Vector2(146.467, 61.9301)
+scale = Vector2(0.151744, 0.103325)
+texture = ExtResource("2_g0h7k")
+
+[node name="Level2Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Level 2
+"
+
+[node name="Level3Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Level 3"
+
+[node name="Level4Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Level 4"
+
+[node name="Level5Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "Level 5
+"
+
+[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="Level2Button" to="." method="_on_level_2_button_pressed"]
